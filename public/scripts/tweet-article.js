@@ -26,11 +26,11 @@ const createTweetArticle = (randomUser) => {
       <div>${randomUser.avatar}</div>
       <div>${randomUser.name}</div>
     </div>
-    <div>${randomUser.handle}</div>
+    <div class="article-header-handle">${randomUser.handle}</div>
   </header>
   <br>
   <div>
-    <div>${randomUser.msg}</div>
+    <div><b>${randomUser.msg}</b></div>
     <br>
     <div class="horizontal-line"></div>
   </div>

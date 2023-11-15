@@ -30,6 +30,11 @@ article {
 
 }
 
+.article-header-handle {
+  color: rgba(0, 0, 255, 0.2);
+  font-weight: bold;
+}
+
 .horizontal-line {
   border-bottom: 4px solid;
 }
@@ -39,6 +44,10 @@ article {
   flex-direction: row;
   justify-content: space-between;
   font-size: medium;
+}
+
+.i-tag{
+  color: #4056A1;
 }
 
 #flag:hover,

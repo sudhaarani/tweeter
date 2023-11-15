@@ -44,9 +44,10 @@ article {
   flex-direction: row;
   justify-content: space-between;
   font-size: medium;
+  padding-top: 1em;
 }
 
-.i-tag{
+.i-tag {
   color: #4056A1;
 }
 

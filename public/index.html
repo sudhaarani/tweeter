@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-article.css" type="text/css" />
 
 
   <!-- for angular arrow on nav -->
@@ -31,6 +32,7 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/tweet-article.js"></script>
 </head>
 
 <body>
@@ -44,7 +46,7 @@
       <i class="fa-solid fa-angles-down" style="color: red;"></i>
     </div>
   </nav>
-  <header>
+  <header class="page-header">
     <div>
       <img src="/images/profile-hex.png">
     </div>
@@ -67,6 +69,9 @@
           <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
         </div>
       </form>
+    </section>
+    <section class="section-tweet-article">
+
     </section>
   </main>
 </body>

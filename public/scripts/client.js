@@ -30,35 +30,51 @@
 //     "created_at": 1461113959088
 //   }
 // ];
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const createTweetArticle = (tweet) => {
-  const $tweet = `<article>
-  <header class="article-header">
-    <div class="article-header-avatarName">
-      <div><img src="${tweet.user.avatars}"></div>
-      <div>${tweet.user.name}</div>
-    </div>
-    <div class="article-header-handle">${tweet.user.handle}</div>
-  </header>
-  <br>
-  <div>
-    <div><b>${tweet.content.text}</b></div>
-    <br>
-    <div class="horizontal-line"></div>
-  </div>
-  <footer>
-    <div class="footer-article">
-      ${timeago.format(tweet.created_at)}
-      <div class="i-tag">
-        <i class="fa-solid fa-flag" id="flag"></i>
-        <i class="fa-solid fa-retweet" id="retweet"></i>
-        <i class="fa-solid fa-heart" id="heart"></i>
-      </div>
-    </div>
-  </footer>
-  </article>`;
-  return $tweet;
+  const $article = $('<article>');
+
+  const $header = $('<header>').addClass('article-header');
+  const $avatarName = $('<div>').addClass('article-header-avatarName');
+  $avatarName
+    .append($('<div>').append($('<img>').attr('src', tweet.user.avatars)))
+    .append($('<div>').text(tweet.user.name));
+
+  const $handle = $('<div>').addClass('article-header-handle').text(tweet.user.handle);
+
+  $header.append($avatarName).append($handle);
+
+  // Use the $tweetContent and $tweetText you created safely here
+
+  const $tweetContent = $('<div>').append($('<b>')).text(tweet.content.text);
+  //const $content = $('<div>').append($tweetContent);
+
+  const $footer = $('<footer>').addClass('footer-article')
+    .append($('<div>').text(timeago.format(tweet.created_at)))
+    .append(
+      $('<div>').addClass('i-tag')
+        .append($('<i>').addClass('fa-solid fa-flag').attr('id', 'flag'))
+        .append($('<i>').addClass('fa-solid fa-retweet').attr('id', 'retweet'))
+        .append($('<i>').addClass('fa-solid fa-heart').attr('id', 'heart'))
+    );
+
+  // Now append everything into the main article object
+  $article
+    .append($header)
+    .append($('<br>'))
+    .append($tweetContent)
+    .append($('<br>'))
+    .append($('<div>').addClass('horizontal-line'))
+    .append($footer);
+
+  return $article;
 };
+
 
 const renderUserTweet = function (tweets) {
   $('.section-tweet-article').empty();

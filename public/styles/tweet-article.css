@@ -26,8 +26,7 @@ article {
   display: flex;
   gap: 10px;
   flex-direction: row;
-  justify-content: space-between;
-
+  align-items: center;
 }
 
 .article-header-handle {
@@ -48,7 +47,10 @@ article {
 }
 
 .i-tag {
+  width: 60px;
   color: #4056A1;
+  display: flex;
+  justify-content: space-between;
 }
 
 #flag:hover,

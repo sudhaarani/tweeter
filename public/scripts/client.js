@@ -78,6 +78,13 @@ $(document).ready(function () {
       event.preventDefault();//to prevent data(form) submission and page refresh
       $tweet = $("#tweet-text").serialize();//turns a set of form data into a query string
       console.log("tweet:", $tweet);
+      if ($("#tweet-text").val() === "" || null) {
+        return alert("Message should not empty!");
+      }
+      console.log("length:", $("#tweet-text").val().length);
+      if ($("#tweet-text").val().length > 140) {
+        return alert("Your message length exceeds 140 character!");
+      }
 
       //to submit a POST request that sends the serialized data to the server
       $.ajax({

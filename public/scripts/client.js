@@ -48,7 +48,7 @@ const createTweetArticle = (tweet) => {
   </div>
   <footer>
     <div class="footer-article">
-     ${tweet.created_at}
+      ${timeago.format(tweet.created_at)}
       <div class="i-tag">
         <i class="fa-solid fa-flag" id="flag"></i>
         <i class="fa-solid fa-retweet" id="retweet"></i>
@@ -93,6 +93,22 @@ $(document).ready(function () {
           console.log(`error received:: ${err}`);
         }
       });
+      //to make a request to /tweets and receive the array of tweets as JSON
+      const loadTweets = function () {
+        $.ajax({
+          url: "/tweets",
+          method: "GET",
+          dataType: "json",
+          success: (jsondata) => { //data received from server
+            console.log("data received json:", jsondata);
+            renderUserTweet(jsondata);
+          },
+          error: (error) => {
+            console.log("error received:", error);
+          },
+        });
+      };
+      loadTweets();
     });
   });
 

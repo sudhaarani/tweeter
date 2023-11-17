@@ -49,10 +49,7 @@ const createTweetArticle = (tweet) => {
 
   $header.append($avatarName).append($handle);
 
-  // Use the $tweetContent and $tweetText you created safely here
-
   const $tweetContent = $('<div>').append($('<b>')).text(tweet.content.text);
-  //const $content = $('<div>').append($tweetContent);
 
   const $footer = $('<footer>').addClass('footer-article')
     .append($('<div>').text(timeago.format(tweet.created_at)))
@@ -63,7 +60,7 @@ const createTweetArticle = (tweet) => {
         .append($('<i>').addClass('fa-solid fa-heart').attr('id', 'heart'))
     );
 
-  // Now append everything into the main article object
+  // append everything into the main article object
   $article
     .append($header)
     .append($('<br>'))
@@ -85,8 +82,8 @@ const renderUserTweet = function (tweets) {
 };
 
 $(document).ready(function () {
-
   console.log("ready");
+
   $(function () {
     const $form = $("#tweet-form");
     console.log("form:", $form);
@@ -94,12 +91,15 @@ $(document).ready(function () {
       event.preventDefault();//to prevent data(form) submission and page refresh
       $tweet = $("#tweet-text").serialize();//turns a set of form data into a query string
       console.log("tweet:", $tweet);
+      $("#error-display").slideUp();
       if ($("#tweet-text").val() === "" || null) {
-        return alert("Message should not empty!");
+        $("#error-display").text("Please enter a tweet");
+        return $("#error-display").slideDown();
       }
       console.log("length:", $("#tweet-text").val().length);
       if ($("#tweet-text").val().length > 140) {
-        return alert("Your message length exceeds 140 character!");
+        $("#error-display").text("Your message length exceeds 140 character!");
+        return $("#error-display").show();
       }
 
       //to submit a POST request that sends the serialized data to the server
@@ -116,6 +116,7 @@ $(document).ready(function () {
           console.log(`error received:: ${err}`);
         }
       });
+
       //to make a request to /tweets and receive the array of tweets as JSON
       const loadTweets = function () {
         $.ajax({
@@ -134,5 +135,4 @@ $(document).ready(function () {
       loadTweets();
     });
   });
-
 });

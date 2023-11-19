@@ -21,3 +21,14 @@ nav {
   align-items: center;
 
 }
+
+#new-tweetBtn {
+  background-color: #4056A1;
+  border: 0;
+  color: white;
+}
+
+#new-tweetArrow {
+  height: 10px;
+  position: relative;
+}

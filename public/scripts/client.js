@@ -54,7 +54,7 @@ $(document).ready(function () {
   console.log("ready");
   $(function () {
 
-    //to move new tweet up and down
+    //to move new tweet arrow up and down
     function topInc() {
       $("#new-tweetArrow").animate({ top: '10px' }, 500, topDec); //topDec is callback func which s added to move infinitively
     }
@@ -63,9 +63,9 @@ $(document).ready(function () {
     }
     topInc();
 
-    //to slide the whole new-tweet section down when the button is clicked
+    //to toggle the whole new-tweet section up or down when the same button is clicked
     $("#new-tweetBtn").on("click", function () {
-      $(".new-tweet").slideDown();
+      $(".new-tweet").toggle();
 
       const $form = $("#tweet-form");
       $form.on("submit", function (event) {

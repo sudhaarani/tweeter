@@ -1,5 +1,6 @@
 /* main - Section - class name is new-tweet */
 .new-tweet {
+  display: none;
   padding-left: 3em;
   text-align: left;
   width: 100%;

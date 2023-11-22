@@ -3,6 +3,7 @@
 
 <head>
   <!-- Meta Information -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   <title>Tweeter - Home Page</title>
 
   <!-- External CSS -->
@@ -50,36 +51,38 @@
       </div>
     </div>
   </nav>
-  <header class="page-header">
-    <div id="header-img">
-      <img src="/images/profile-hex.png">
-    </div>
+  <div id="header-main">
+    <header class="page-header">
+      <div id="header-img">
+        <img src="/images/profile-hex.png">
+      </div>
 
-    <div id="username">
-      <h2>Dhaarani Singaravel</h2>
-    </div>
-  </header>
+      <div id="username">
+        <h2>Dhaarani Singaravel</h2>
+      </div>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form id="tweet-form" action="/tweets/" method="POST">
-        <label for="tweet-text"><b>What are you humming about?</b></label>
-        <br>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div id="btnOp">
-          <button type="submit" id="tweetBtn">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
-        </div>
-      </form>
-      <div id="error-display"></div>
-    </section>
-    <section class="section-tweet-article">
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form id="tweet-form" action="/tweets/" method="POST">
+          <label for="tweet-text"><b>What are you humming about?</b></label>
+          <br>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div id="btnOp">
+            <button type="submit" id="tweetBtn">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
+          </div>
+        </form>
+        <div id="error-display"></div>
+      </section>
+      <section class="section-tweet-article">
 
-    </section>
-    <button type="submit" id="scrollBtn"><i class="fa-solid fa-angles-up" style="color: white;"></i></button>
-  </main>
+      </section>
+      <button type="submit" id="scrollBtn"><i class="fa-solid fa-angles-up" style="color: white;"></i></button>
+    </main>
+  </div>
 </body>
 
 </html>

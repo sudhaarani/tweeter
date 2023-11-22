@@ -56,7 +56,7 @@ $(document).ready(function () {
 
     //to move new tweet arrow up and down
     function topInc() {
-      $("#new-tweetArrow").animate({ top: '10px' }, 500, topDec); //topDec is callback func which s added to move infinitively
+      $("#new-tweetArrow").animate({ top: '10px' }, 500, topDec); //topDec is callback func which s added to move arrow infinitively
     }
     function topDec() {
       $("#new-tweetArrow").animate({ top: '0px' }, 500, topInc);
@@ -92,12 +92,12 @@ $(document).ready(function () {
             $('#tweet-text').val('');//clearing the textarea once msg is sent
             $(".counter").val("140").css({ "font-weight": "bold", "color": "black" });//set counter back to 140 count with added css once msg is sent
             console.log(`data received:: ${res}`);
+            loadTweets();//to load entered tweet as an article
           },
           error: function (err) {
             console.log(`error received:: ${err}`);
           }
         });
-        loadTweets();//to load entered tweet as an article
       });
     });
 
@@ -118,6 +118,5 @@ $(document).ready(function () {
       });
     };
     loadTweets();//to load tweets in db as an article
-
   });
 });

@@ -24,12 +24,15 @@ $(document).ready(function () {
     } else {
       $("#scrollBtn").css({ "display": "none" });
     }
+  });
 
-    // When the user clicks on the button, scroll to the top of the document
-    $("#scrollBtn").on("click", function () {
-      $('html, body').animate({ scrollTop: 0 }, 100);
+  // When the user clicks on the button, scroll to the top of the document
+  $("#scrollBtn").on("click", function (event) {
+    event.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 300, function () {
       $(".new-tweet").show();//to show the new-tweet section from hidden
       $("#tweet-text").focus(); //to enable the textarea
     });
   });
+
 });

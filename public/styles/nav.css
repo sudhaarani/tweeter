@@ -31,3 +31,8 @@ nav {
   height: 10px;
   position: relative;
 }
+
+#new-tweetBtn:hover,
+#new-tweetArrow:hover {
+  cursor: pointer;
+}

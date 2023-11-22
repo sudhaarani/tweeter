@@ -72,3 +72,15 @@ article {
   background-color: red;
   border: 0;
 }
+
+#scrollBtn:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+
+  /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
+  article {
+    margin: 1em 1em 1em 0;
+  }
+}

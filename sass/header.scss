@@ -1,9 +1,4 @@
-@mixin content_align {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+@import 'variables_mixins';
 
 .page-header {
   height: 380px;

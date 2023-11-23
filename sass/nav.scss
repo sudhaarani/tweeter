@@ -1,10 +1,5 @@
 @import 'variables';
 
-.logo {
-  font-family: "Bungee";
-  font-size: $font_36;
-}
-
 nav {
   height: 120px;
   width: 100%;
@@ -14,27 +9,33 @@ nav {
   display: flex;
   justify-content: space-between;
   font-size: $font_24;
-}
 
-.nav-new-tweet {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .logo {
+    font-family: "Bungee";
+    font-size: $font_36;
+  }
 
-#new-tweetBtn {
-  background-color: $primary_bg_color;
-  border: 0;
-  color: white;
-}
+  .nav-new-tweet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-#new-tweetArrow {
-  height: 10px;
-  position: relative;
-}
 
-#new-tweetBtn:hover,
-#new-tweetArrow:hover {
-  cursor: pointer;
+  #new-tweetBtn {
+    background-color: $primary_bg_color;
+    border: 0;
+    color: white;
+  }
 
+  #new-tweetArrow {
+    height: 10px;
+    position: relative;
+  }
+
+  #new-tweetBtn:hover,
+  #new-tweetArrow:hover {
+    cursor: pointer;
+
+  }
 }

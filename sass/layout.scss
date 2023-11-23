@@ -3,8 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-@import 'variables';
-@import 'header';
+@import 'variables_mixins';
 
 html {
   box-sizing: border-box;

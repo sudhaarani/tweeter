@@ -4,6 +4,7 @@
  * Do not modify these two selectors, please
  */
 @import 'variables';
+@import 'header';
 
 html {
   box-sizing: border-box;
@@ -33,10 +34,7 @@ body {
 main {
   width: 90%;
   background-color: $milky_bg_color;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  @include content_align;
 }
 
 @media only screen and (min-width: 768px) {

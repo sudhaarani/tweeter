@@ -1,0 +1,50 @@
+/* main - Section - class name is new-tweet */
+@import 'variables';
+
+.new-tweet {
+  display: none;
+  padding-left: 2em;
+  text-align: left;
+  width: 100%;
+}
+
+#tweet-text {
+  height: 50px;
+  width: 100%;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 4px solid;
+}
+
+#tweet-text:focus {
+  outline: none !important;
+}
+
+#tweetBtn {
+  background-color: $primary_bg_color;
+  font-family: "Bungee";
+  color: white;
+  border: 0;
+}
+
+#btnOp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#error-display {
+  margin-top: 10px;
+  background-color: orangered;
+  font-size: $font_24;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+
+  /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
+  .new-tweet {
+    padding: 0;
+  }
+}

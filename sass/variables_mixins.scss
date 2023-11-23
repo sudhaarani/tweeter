@@ -1,0 +1,11 @@
+$primary_bg_color: #4056A1;
+$milky_bg_color: #f4f1ec;
+$font_24: 24px;
+$font_36: 36px;
+
+@mixin content_align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -1,5 +1,4 @@
-@import 'variables';
-@import 'header';
+@import 'variables_mixins';
 
 nav {
   height: 120px;
@@ -19,7 +18,6 @@ nav {
   .nav-new-tweet {
     @include content_align;
   }
-
 
   #new-tweetBtn {
     background-color: $primary_bg_color;

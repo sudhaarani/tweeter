@@ -1,8 +1,3 @@
-.logo {
-  font-family: "Bungee";
-  font-size: 36px;
-}
-
 nav {
   height: 120px;
   width: 100%;
@@ -14,24 +9,29 @@ nav {
   font-size: 24px;
 }
 
-.nav-new-tweet {
+nav .logo {
+  font-family: "Bungee";
+  font-size: 36px;
+}
+
+nav .nav-new-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#new-tweetBtn {
+nav #new-tweetBtn {
   background-color: #4056A1;
   border: 0;
   color: white;
 }
 
-#new-tweetArrow {
+nav #new-tweetArrow {
   height: 10px;
   position: relative;
 }
 
-#new-tweetBtn:hover,
-#new-tweetArrow:hover {
+nav #new-tweetBtn:hover,
+nav #new-tweetArrow:hover {
   cursor: pointer;
 }

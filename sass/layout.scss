@@ -1,0 +1,54 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+@import 'variables';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  color: #545149;
+  background-color: $milky_bg_color;
+  font-size: $font_24;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+main {
+  width: 90%;
+  background-color: $milky_bg_color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+
+  /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
+  main {
+    width: 50.7%;
+    margin: 80px 0 0 40px;
+  }
+
+  #header-main {
+    display: flex;
+    flex-direction: row;
+  }
+}

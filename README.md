@@ -17,12 +17,6 @@ Tweeter is a concise Twitter replica on a single page. This full-stack web appli
 - chance
 - md5
 
-## Final Product
-![ScreenSize_max_767.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/ScreenSize_max_767.png)
-![Tweeter_webpage.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/Tweeter_webpage.png)
-![new_tweet_entered.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/new_tweet_entered.png)
-![new_tweet_section.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/new_tweet_section.png)
-
 ## A Short Description about the Tweeter Project
 
 Tweeter is a single-page Twitter clone, where users can create short posts of up to 140 characters and have them append to the main page. Posts are sequential, with the most recent posts appearing at the top of the page. To do so, Tweeter fetches a list of posts from a simplified ‘server’ and allows users to add posts to this list dynamically. All the requests will be made asynchronously, which will allow us to gain familiarity using the jQuery library to make these requests.
@@ -46,5 +40,12 @@ Tweeter is a single-page Twitter clone, where users can create short posts of up
   - Use AJAX to send and fetch information from a server, and display it on the web page.
   - Use jQuery to make AJAX requests to send and fetch data from a server and dynamically display it on the web page.
   - Use JavaScript to validate form data and display error messages.
+
+## Final Product
+![ScreenSize_max_767.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/ScreenSize_max_767.png)
+![Tweeter_webpage.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/Tweeter_webpage.png)
+![new_tweet_entered.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/new_tweet_entered.png)
+![new_tweet_section.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/new_tweet_section.png)
+
 
 

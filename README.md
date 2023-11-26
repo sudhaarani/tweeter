@@ -4,10 +4,11 @@ Tweeter is a concise Twitter replica on a single page. This full-stack web appli
 
 ## Getting Started
 
-1. Install dependencies using the `npm install` command.
-2. Install SASS globally on your system using the `npm install -g sass` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+1. Clone this repository.
+2. Install dependencies using the `npm install` command.
+3. Install SASS globally on your system using the `npm install -g sass` command.
+4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+5. Go to <http://localhost:8080/> in your browser.
 
 ## Dependencies
 

@@ -3,7 +3,6 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-
 html {
   box-sizing: border-box;
 }
@@ -17,18 +16,16 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
 main {
   width: 90%;
   background-color: #f4f1ec;
@@ -39,13 +36,11 @@ main {
 }
 
 @media only screen and (min-width: 768px) {
-
   /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
   main {
     width: 50.7%;
-    margin: 80px 0 0 50px;
+    margin: 80px 0 0 40px;
   }
-
   #header-main {
     display: flex;
     flex-direction: row;

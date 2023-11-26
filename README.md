@@ -4,13 +4,10 @@ Tweeter is a concise Twitter replica on a single page. This full-stack web appli
 
 ## Getting Started
 
-1. [Fork](https://github.com/lighthouse-labs/tweeter) this repository which is the starter code for the project.
-2. Clone the repository onto your local device.
-3. Install dependencies using the `npm install` command.
-4. Install SASS globally on your system using the `npm install -g sass` command.
-5. Start the SASS using the `npm run sass-watch` command.
-6. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-7. Go to <http://localhost:8080/> in your browser.
+1. Install dependencies using the `npm install` command.
+2. Install SASS globally on your system using the `npm install -g sass` command.
+3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+4. Go to <http://localhost:8080/> in your browser.
 
 ## Dependencies
 
@@ -25,3 +22,29 @@ Tweeter is a concise Twitter replica on a single page. This full-stack web appli
 ![Tweeter_webpage.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/Tweeter_webpage.png)
 ![new_tweet_entered.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/new_tweet_entered.png)
 ![new_tweet_section.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/new_tweet_section.png)
+
+## A Short Description about the Tweeter Project
+
+Tweeter is a single-page Twitter clone, where users can create short posts of up to 140 characters and have them append to the main page. Posts are sequential, with the most recent posts appearing at the top of the page. To do so, Tweeter fetches a list of posts from a simplified ‘server’ and allows users to add posts to this list dynamically. All the requests will be made asynchronously, which will allow us to gain familiarity using the jQuery library to make these requests.
+
+## Learning Objectives
+
+* HTML & CSS
+
+  - Write well-structured, maintainable, accessible and semantic HTML/CSS code.
+  - Manipulate the layout of HTML elements using margin, padding and floats.
+  - Incorporate and use external fonts.
+  - Apply techniques of responsive web design, including media queries.
+  - Refactor CSS by using and applying basic features of SASS.
+  - Create responsive designs by using media queries and flexbox.
+  - Interpret and execute on design specifications.
+
+* Client Side JavaScript
+
+  - Write basic client-side JS to add dynamic content to pages.
+  - Use jQuery to bind event handlers and to create and manipulate DOM elements
+  - Use AJAX to send and fetch information from a server, and display it on the web page.
+  - Use jQuery to make AJAX requests to send and fetch data from a server and dynamically display it on the web page.
+  - Use JavaScript to validate form data and display error messages.
+
+

@@ -41,7 +41,6 @@ const createTweetArticle = (tweet) => {
   return $article;
 };
 
-
 const renderUserTweet = function (tweets) {
   $('.section-tweet-article').empty();
   $.each(tweets, (index, tweet) => {
@@ -50,8 +49,23 @@ const renderUserTweet = function (tweets) {
   });
 };
 
+//to make a get request to /tweets and receive the array of tweets as JSON
+const loadTweets = function () {
+  $.ajax({
+    url: "/tweets",
+    method: "GET",
+    dataType: "json",
+    success: (jsondata) => { //data received from server
+      console.log("data received json:", jsondata);
+      renderUserTweet(jsondata);
+    },
+    error: (error) => {
+      console.log("error received:", error);
+    },
+  });
+};
+
 $(document).ready(function () {
-  console.log("ready");
   $(function () {
 
     //to move new tweet arrow up and down
@@ -101,22 +115,6 @@ $(document).ready(function () {
       });
     });
 
-    //to make a request to /tweets and receive the array of tweets as JSON
-    const loadTweets = function () {
-      console.log("loadTweets func:");
-      $.ajax({
-        url: "/tweets",
-        method: "GET",
-        dataType: "json",
-        success: (jsondata) => { //data received from server
-          console.log("data received json:", jsondata);
-          renderUserTweet(jsondata);
-        },
-        error: (error) => {
-          console.log("error received:", error);
-        },
-      });
-    };
     loadTweets();//to load tweets in db as an article
   });
 });

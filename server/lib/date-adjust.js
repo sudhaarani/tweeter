@@ -14,9 +14,9 @@ module.exports = () => {
   // Subtract one day in milliseconds (oneDayMs) times the tweets length minus the current index.
   // This keeps the newest tweets at the bottom, and allows for further tweets to be added.
   tweetsJSON = tweetsJSON.map((tweet, index) => {
-    tweet.created_at = Date.now() - (oneDayMs * (tweetsJSON.length - index));
-    return tweet;
+    tweet.created_at = Date.now() - (oneDayMs * (tweetsJSON.length - index));//created_at is updated
+    return tweet;//it returns an object
   });
   // Re-write the tweets with the new date values.
-  fs.writeFileSync('server/data-files/initial-tweets.json', JSON.stringify(tweetsJSON, null, 2), { encoding: "utf8" });
+  fs.writeFileSync('server/data-files/initial-tweets.json', JSON.stringify(tweetsJSON, null, 2), { encoding: "utf8" });//stringify converts obj to string of js obj
 };

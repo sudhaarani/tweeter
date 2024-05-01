@@ -45,8 +45,8 @@ Tweeter is a single-page Twitter clone, where users can create short posts of up
 ## Final Product
 ![ScreenSize_max_767.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/ScreenSize_max_767.png)
 ![Tweeter_webpage.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/Tweeter_webpage.png)
-![new_tweet_entered.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/new_tweet_entered.png)
-![new_tweet_section.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/new_tweet_section.png)
+![new_tweet.png](https://github.com/sudhaarani/tweeter/blob/master/public/images/new_tweet.png)
+
 
 
 
